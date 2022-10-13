@@ -1,0 +1,142 @@
+---
+title: "Hacking Social Media"
+author: "by @whatsgoodio"
+format: revealjs
+---
+
+## [Simulation](https://twitter.com/BrentToderian/status/1192568535009988608) {.center}
+
+## [Animation & Visualization](https://twitter.com/CraigTaylorViz/status/1159779288733880321) {.center}
+
+## [The Emoji Race](https://observablehq.com/@mbostock/twitter-emoji-race) {.center}
+
+## Hand Gesture Recogition 
+
+[![](img/tensorflow.png)](https://twitter.com/bourdakos1/status/1125436388026060801)
+
+
+## [A Face Recognition Story by SRF Data](https://www.srf.ch/news/schweiz/automatische-gesichtserkennung-so-einfach-ist-es-eine-ueberwachungsmaschine-zu-bauen) {.center}
+
+## Hi, I'm Matt.
+
+:::: {.columns}
+
+
+::: {.column width="60%" }
+
+- Data & Analytics Engineering [@cynkra](https://cynkra.com)
+
+- formerly: architecture of KOF (ETH) data pipelines
+
+- global coordinator for the useR! conference
+
+:::
+
+
+::: {.column width="40%" }
+
+![](img/matt.jpeg){fig-align="center" height="400"}
+
+:::
+
+::::
+
+
+# Why Online Researcher Should Learn to Code
+
+## 
+
+![](img/busy.png)
+
+
+## [500 000 000](https://www.google.com/search?q=number+of+tweets+per+day) {.center}
+
+
+## Benefits of a Programming Approach
+
+## 
+
+![](img/communication.png)
+
+## [Access to Data Sources](https://developer.twitter.com/en/docs) {.center}
+
+## [Text-as-Data](https://quanteda.io/)
+
+## Visualization Examples
+
+```{r, fig.height=6, echo=FALSE, message=FALSE, warning=FALSE}
+library(quanteda)
+library(quanteda.textplots)
+library(ggplot2)
+library(dplyr)
+
+tokeninfo <- summary(data_corpus_inaugural)
+
+ggplot(data = tokeninfo,
+       aes(x = Year, y = Tokens, group = 1)) +
+    geom_line() +
+    geom_point() +
+    scale_x_continuous(labels = c(seq(1789,
+                                      2017, 12)), breaks = seq(1789, 2017, 12)) +
+  ggtitle("Number of Tokens in Inaugural Speeches of American Presidents") +
+    theme_bw()
+
+```
+
+## Visualization: Simple Wordcloud
+
+```{r, fig.height=7, fig.width=10, echo=FALSE, message=FALSE, warning=FALSE}
+dfm_inaug <- corpus_subset(data_corpus_inaugural, Year <= 1826) %>% 
+    dfm(remove = stopwords('english'), remove_punct = TRUE) %>%
+    dfm_trim(min_termfreq = 10, verbose = FALSE)
+
+set.seed(100)
+textplot_wordcloud(dfm_inaug)
+```
+
+
+# Where to Start? 
+
+## [The Choice that Doesn't Matter](https://devops-carpentry.github.io/book/programming.html) {.center}
+
+
+## [Let's Get Work Immediately - RStudio Cloud](https://cloud.rstudio.com) {.center}
+
+
+## Resources
+
+- Big picture & contextualization: [devOps Carpentry]()
+- Hacking for Science
+- Looooots of information, content aggregator [The Big Book of R]()
+- Stackoverflow: [questions tagged R](https://stackoverflow.com/questions/tagged/r) | [questions tagged Python](https://stackoverflow.com/questions/tagged/python)
+- [R Project](https://r-project.org)
+- [R CRAN Task Views](https://cran.r-project.org)
+- [twitter](https://twitter.com/whatsgoodio)
+- [quarto](https://quarto.org/)
+
+
+
+## [Don't Believe Everything You See on Social Media](https://twitter.com/orex_nana/status/1188828753834790912?s=20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- https://www.srf.ch/news/schweiz/automatische-gesichtserkennung-so-einfach-ist-es-eine-ueberwachungsmaschine-zu-bauen -->
+
+
+<!-- https://github.com/ageitgey/face_recognition -->
+
+
+
+<!-- https://poissonisfish.com/2019/10/09/twitter-data-analysis-in-r/ -->
