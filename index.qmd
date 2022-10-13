@@ -42,7 +42,7 @@ format: revealjs
 ::::
 
 
-# Why Online Researcher Should Learn to Code
+# Why Online Researchers Should Learn to Code
 
 ## 
 
@@ -60,7 +60,7 @@ format: revealjs
 
 ## [Access to Data Sources](https://developer.twitter.com/en/docs) {.center}
 
-## [Text-as-Data](https://quanteda.io/)
+## [Text-as-Data](https://quanteda.io/) {.center}
 
 ## Visualization Examples
 
@@ -109,14 +109,19 @@ textplot_wordcloud(dfm_inaug)
 - Hacking for Science
 - Looooots of information, content aggregator [The Big Book of R]()
 - Stackoverflow: [questions tagged R](https://stackoverflow.com/questions/tagged/r) | [questions tagged Python](https://stackoverflow.com/questions/tagged/python)
+
+
+## Resources c'd
+
 - [R Project](https://r-project.org)
 - [R CRAN Task Views](https://cran.r-project.org)
 - [twitter](https://twitter.com/whatsgoodio)
 - [quarto](https://quarto.org/)
+- Recommendation to get into R: [R for Data Science](https://r4ds.had.co.nz/) | [Advanced R](http://adv-r.had.co.nz/) 
+- [R Community Explorer](https://benubah.github.io/r-community-explorer/index.html)
 
 
-
-## [Don't Believe Everything You See on Social Media](https://twitter.com/orex_nana/status/1188828753834790912?s=20)
+## [Don't Believe Everything You See on Social Media](https://twitter.com/orex_nana/status/1188828753834790912?s=20) {.center}
 
 
 
